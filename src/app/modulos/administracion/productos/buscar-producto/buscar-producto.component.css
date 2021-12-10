@@ -1,0 +1,4 @@
+.imagenProducto{
+    width: 100px;
+}
+.pesos:before { content:'$'; }

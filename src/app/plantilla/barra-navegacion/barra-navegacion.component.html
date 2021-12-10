@@ -1,21 +1,21 @@
 <nav>
-    <div class="nav-wrapper">
-      <a routerLink="/inicio" class="brand-logo"><img src="./assets/recursos/img/cupcake.png" alt="Logo" style="width: 7%;"></a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos">Productos</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="nav-wrapper">
+    <a routerLink="/inicio" class="brand-logo"> &nbsp;<img src="./assets/recursos/img/cupcake-blanco2.png" alt="Logo" style="width: 95%;"></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/listarProductos">Productos</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
+      <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/producto">Productos</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
-    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
-  </ul>
+<ul class="sidenav" id="mobile-demo">
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/producto">Productos</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar Clave</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
+  <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+</ul>

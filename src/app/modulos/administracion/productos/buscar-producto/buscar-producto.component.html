@@ -1,1 +1,21 @@
-<p>buscar-producto works!</p>
+
+<a routerLink="/administracion/crearProducto" class="btn">Nuevo Producto</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Ediar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>{{p.nombre}}</td>
+            <td>${{p.precio}}</td>
+            <td><img src="{{p.imagen}}" alt="{{p.nombre}}-${{p.precio}}" class="imagenProducto"></td>
+            <td><a routerLink="/administracion/editarProducto/{{p.id}}" class="btn">Editar Producto</a></td>
+        </tr>
+    </tbody>
+</table>
