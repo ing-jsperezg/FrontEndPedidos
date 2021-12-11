@@ -40,7 +40,7 @@ export class ProductoService {
     })
   }
 
-  eliminarProducto(id: String): Observable<any>{
+  deleteProducto(id: String): Observable<any>{
     return this.http.delete(`${this.url}/productos/${id}`, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`

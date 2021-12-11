@@ -1,33 +1,32 @@
-<div class="had-container">
-    <div class="parallax-container logueo">
-        <div class="row"><br>
-            <div class="col m8 s8 offset-m2 offset-s2 center">
-                <img src="./assets/recursos/img/cupcake.png" alt="Logo" class="circle responsive-img" style="width: 15%;">
-                <div class="row login">
-                    <h4>Inicio de sesión.</h4>
-                    <form [formGroup]="fgValidador" class="col s12" (ngSubmit)="identificarUsuario()">
-                        <div class="row">
-                            <div class="input-field col m12 s12">
-                                <i class="material-icons iconis prefix">email</i>
-                                <input formControlName="usuario" id="email" type="text" required>
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col m12 s12">
-                                <i class="material-icons iconis prefix">key</i>
-                                <input formControlName="clave" id="password" type="password"  required>
-                                <label for="password">Password</label>
-                            </div>
-                        </div>
-                        <div class="row center-align">
-                            <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Iniciar sesión!
-                                <i class="class material-icons rigth">send</i>
-                            </button>
-                        </div>
-                    </form>
+<br><div class="row">
+    <div class="col-md-5 mx-auto">
+        <div id="first">
+            <div class="myform form ">
+                <div class="logo mb-3">
+                    <div class="col-md-12 text-center">
+                        <img src="./assets/recursos/img/cupcake.png" alt="Logo" class="circle responsive-img" style="width: 25%;">
+                    </div>
                 </div>
+                <form [formGroup]="fgValidador" (ngSubmit)="identificarUsuario()" action="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input formControlName="usuario" type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Contraseña</label>
+                        <input formControlName="clave" type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <p class="text-center">Al registrarse acepta nuestro <a href="#">Terms Of Use</a></p>
+                    </div>
+                    <div class="col-md-12 justify-content-center">
+                        <button [disabled]="!fgValidador.valid" type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Entrar</button>
+                    </div>
+                    <div class="form-group">
+                        <p class="text-center">No tengo cuenta? <a href="#" id="signup">Registrate</a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div> <!-- fin del .container --><br><br>
+</div><br>

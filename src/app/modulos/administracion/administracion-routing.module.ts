@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.component';
 import { EditarPersonaComponent } from './personas/editar-persona/editar-persona.component';
+import { EliminarPersonaComponent } from './personas/eliminar-persona/eliminar-persona.component';
 import { BuscarProductoComponent } from './productos/buscar-producto/buscar-producto.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
+import { EliminarProductoComponent } from './productos/eliminar-producto/eliminar-producto.component';
 
 const routes: Routes = [
+  //---------->> PERSONAS <<----------
   {
     path: 'crearPersona',
     component:CrearPersonaComponent
@@ -17,6 +20,7 @@ const routes: Routes = [
     component:EditarPersonaComponent,
     canActivate: [ValidadorSesionGuard]
   },
+  //---------->> PRODUCTOS <<----------
   {
     path:'listarProductos', 
     component:BuscarProductoComponent,
@@ -30,6 +34,11 @@ const routes: Routes = [
   {
     path:'editarProducto/:id',
     component:EditarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path:'eliminarProducto/:id',
+    component:EliminarProductoComponent,
     canActivate: [ValidadorSesionGuard]
   }
 ];

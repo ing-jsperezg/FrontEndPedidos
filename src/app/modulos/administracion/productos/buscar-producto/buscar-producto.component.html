@@ -1,4 +1,4 @@
-
+<br>
 <a routerLink="/administracion/crearProducto" class="btn">Nuevo Producto</a>
 <table class="table responsive">
     <thead>
@@ -6,7 +6,7 @@
             <th>Nombre</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th>Ediar</th>
+            <th>Acciones</th>
         </tr>
     </thead>
 
@@ -15,7 +15,12 @@
             <td>{{p.nombre}}</td>
             <td>${{p.precio}}</td>
             <td><img src="{{p.imagen}}" alt="{{p.nombre}}-${{p.precio}}" class="imagenProducto"></td>
-            <td><a routerLink="/administracion/editarProducto/{{p.id}}" class="btn">Editar Producto</a></td>
+            <td>
+                <a routerLink="/administracion/editarProducto/{{p.id}}" class="btn">Editar</a> &nbsp;
+                <a routerLink="/administracion/eliminarProducto/{{p.id}}" class="btn btn-danger">Eliminar</a>
+            </td>
         </tr>
     </tbody>
 </table>
+
+<br>
